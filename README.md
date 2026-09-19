@@ -22,9 +22,9 @@ Rather than solving the puzzle deterministically, we formulate Sudoku as an **op
 
 The objective is to find a configuration with an energy of:
 
-\[
+
 E_{grid} = 0
-\]
+
 
 where zero means that all Sudoku constraints are satisfied.
 
