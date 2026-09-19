@@ -78,7 +78,7 @@ A lower energy corresponds to a configuration satisfying more Sudoku constraints
 The target is:
 
 
-E{grid} = 0
+E_{grid} = 0
 
 
 which corresponds to a valid Sudoku solution.
@@ -103,9 +103,9 @@ Worse configurations can also be accepted, particularly at high temperatures. Th
 
 The temperature is progressively reduced according to:
 
-\[
+
 T_{n+1}=0.99T_n
-\]
+
 
 using a cooling rate of `0.99` in the current implementation. :contentReference[oaicite:1]{index=1}
 
@@ -133,7 +133,7 @@ The energy function evaluates the constraints associated with rows, columns and 
 
 ---
 
-## 📊 Visualization
+##  Visualization
 
 A visualization was developed to follow the evolution of the Sudoku grid during the optimization process.
 
@@ -149,59 +149,59 @@ It allows us to observe:
 
 ---
 
-## 🎲 Monte Carlo Analysis
+##  Monte Carlo Analysis
 
 Because the algorithm is stochastic, different executions can require different numbers of iterations.
 
 To study this variability, the solver was executed:
 
-\[
+
 M=100
-\]
+
 
 times using different random seeds.
 
-Let \(N_i\) denote the number of iterations required during execution \(i\).
+Let $N_i$ denote the number of iterations required during execution \(i\).
 
 The empirical mean is:
 
-\[
+$$
 \bar N =
 \frac{1}{M}\sum_{i=1}^{M}N_i
-\]
+$$
 
 and the empirical variance is:
 
-\[
+$$
 \sigma^2 =
 \frac{1}{M}\sum_{i=1}^{M}(N_i-\bar N)^2
-\]
+$$
 
 For the experiment, we obtained:
 
-\[
+$$
 \bar N = 431.96
-\]
+$$
 
 with a standard deviation of approximately:
 
-\[
+$$
 \sigma = 355.02
-\]
+$$
 
 Using the normal approximation, the estimated 95% confidence interval is:
 
-\[
+$$
 \bar N
 \pm
 1.96\sqrt{\frac{\sigma^2}{M}}
-\]
+$$
 
 giving approximately:
 
-\[
+$$
 [362.06,\;501.86]
-\]
+$$
 
 This experiment illustrates the variability introduced by the stochastic nature of the algorithm.
 
