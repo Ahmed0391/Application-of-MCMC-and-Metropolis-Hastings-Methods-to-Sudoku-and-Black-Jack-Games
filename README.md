@@ -64,13 +64,14 @@ The algorithm follows these steps:
 The energy measures the number of constraint violations in the grid:
 
 
-E_{grid} =
-\sum_{i=1}^{9}(9-\operatorname{card}{row}_i)
-+
-\sum_{j=1}^{9}(9-\operatorname{card}{column}_j)
-+
-\sum_{k=1}^{9}(9-\operatorname{card}{subgrid}_k)
-\]
+$$
+\begin{aligned}
+E(\text{grid}) ={}&
+\sum_{i=1}^{9}\left(9-\operatorname{card}(\text{row}_i)\right) \\
+&+ \sum_{j=1}^{9}\left(9-\operatorname{card}(\text{column}_j)\right) \\
+&+ \sum_{k=1}^{9}\left(9-\operatorname{card}(\text{subgrid}_k)\right)
+\end{aligned}
+$$
 
 A lower energy corresponds to a configuration satisfying more Sudoku constraints.
 
