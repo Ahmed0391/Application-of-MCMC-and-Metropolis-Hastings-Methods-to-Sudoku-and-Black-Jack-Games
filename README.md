@@ -63,22 +63,22 @@ The algorithm follows these steps:
 
 The energy measures the number of constraint violations in the grid:
 
-\[
-E(\text{grid}) =
-\sum_{i=1}^{9}(9-\operatorname{card}(\text{row}_i))
+
+E_{grid} =
+\sum_{i=1}^{9}(9-\operatorname{card}{row}_i)
 +
-\sum_{j=1}^{9}(9-\operatorname{card}(\text{column}_j))
+\sum_{j=1}^{9}(9-\operatorname{card}{column}_j)
 +
-\sum_{k=1}^{9}(9-\operatorname{card}(\text{subgrid}_k))
+\sum_{k=1}^{9}(9-\operatorname{card}{subgrid}_k)
 \]
 
 A lower energy corresponds to a configuration satisfying more Sudoku constraints.
 
 The target is:
 
-\[
-E(\text{grid}) = 0
-\]
+
+E{grid} = 0
+
 
 which corresponds to a valid Sudoku solution.
 
@@ -86,15 +86,15 @@ which corresponds to a valid Sudoku solution.
 
 For a proposed configuration, the acceptance probability is:
 
-\[
+
 \alpha =
 \min\left(
 1,
 \exp\left(
--\frac{E_{\text{proposed}}-E_{\text{current}}}{T}
+-\frac{E_{{proposed}-E_{current}}{T}
 \right)
 \right)
-\]
+
 
 If the proposed configuration improves the energy, it is accepted with probability 1.
 
