@@ -143,9 +143,9 @@ It allows us to observe:
 - the permutations performed during the algorithm;
 - the progression toward a valid Sudoku configuration.
 
-![Sudoku resolution](images/sudoku_resolution.jpg)
+![Sudoku resolution](sudoku_resolution.jpg)
 
-*Visualization of the Sudoku resolution process using Octave.*
+*Visualization of the Sudoku resolution process using Matlab.*
 
 ---
 
