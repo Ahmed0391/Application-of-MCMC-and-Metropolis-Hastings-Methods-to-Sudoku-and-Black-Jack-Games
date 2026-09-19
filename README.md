@@ -66,11 +66,11 @@ The energy measures the number of constraint violations in the grid:
 
 $$
 E(\text{grid}) =
-\sum_{i=1}^{9}\left(9-\operatorname{card}(\text{row}_i)\right)
+\sum_{i=1}^{9}\left(9-\left|\mathrm{unique}(\text{row}_i)\right|\right)
 +
-\sum_{j=1}^{9}\left(9-\operatorname{card}(\text{column}_j)\right)
+\sum_{j=1}^{9}\left(9-\left|\mathrm{unique}(\text{column}_j)\right|\right)
 +
-\sum_{k=1}^{9}\left(9-\operatorname{card}(\text{subgrid}_k)\right)
+\sum_{k=1}^{9}\left(9-\left|\mathrm{unique}(\text{subgrid}_k)\right|\right)
 $$
 
 A lower energy corresponds to a configuration satisfying more Sudoku constraints.
